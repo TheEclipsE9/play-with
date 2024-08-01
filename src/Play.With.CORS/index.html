@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Information</title>
+    <script>
+        function fetchWeatherData() {
+            var serverAddress = document.getElementById("serverAddress").value;
+            var serverPort = document.getElementById("serverPort").value;
+            var fullAddress = `${serverAddress}:${serverPort}/weather`;
+
+            fetch(fullAddress)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Correct date parsing
+                    var date = new Date(data.date);
+                    if (isNaN(date)) {
+                        date = new Date(data.date.replace(/([+\-]\d{2}):(\d{2})$/, '$1$2'));
+                    }
+                    document.getElementById("date").innerText = date.toLocaleString();
+                    document.getElementById("tempC").innerText = data.temperatureC + " °C";
+                    document.getElementById("tempF").innerText = data.temperatureF + " °F";
+                    document.getElementById("summary").innerText = data.summary;
+                })
+                .catch(error => {
+                    console.error('There has been a problem with your fetch operation:', error);
+                });
+        }
+    </script>
+</head>
+<body>
+    <h1>Current Weather</h1>
+    <div>
+        <label for="serverAddress">Server Address:</label>
+        <input type="text" id="serverAddress" placeholder="http://localhost">
+        <label for="serverPort">Port:</label>
+        <input type="text" id="serverPort" placeholder="5005">
+        <button onclick="fetchWeatherData()">Fetch Weather</button>
+    </div>
+    <div>
+        <strong>Date and Time:</strong> <span id="date"></span>
+    </div>
+    <div>
+        <strong>Temperature (Celsius):</strong> <span id="tempC"></span>
+    </div>
+    <div>
+        <strong>Temperature (Fahrenheit):</strong> <span id="tempF"></span>
+    </div>
+    <div>
+        <strong>Summary:</strong> <span id="summary"></span>
+    </div>
+</body>
+</html>
