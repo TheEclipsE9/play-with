@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Play.With.IEnumerable.ToLis
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Play.With.Generics.Invariance", "Play.With.Generics.Invariance\Play.With.Generics.Invariance.csproj", "{3038F8EF-8A85-4863-8CC0-67FA3B93288C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Play.With.IEnumerable.DeepDive", "Play.With.IEnumerable.DeepDive\Play.With.IEnumerable.DeepDive.csproj", "{D18B8C7E-B2A8-4818-9054-6C1D569680C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Play.With.IEnumerable.DeepDive", "Play.With.IEnumerable.DeepDive\Play.With.IEnumerable.DeepDive.csproj", "{D18B8C7E-B2A8-4818-9054-6C1D569680C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Play.With.IEnumerable", "Play.With.IEnumerable\Play.With.IEnumerable.csproj", "{DDAFDFFC-6A99-465F-9FB8-1733AD9005B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D18B8C7E-B2A8-4818-9054-6C1D569680C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D18B8C7E-B2A8-4818-9054-6C1D569680C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D18B8C7E-B2A8-4818-9054-6C1D569680C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDAFDFFC-6A99-465F-9FB8-1733AD9005B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDAFDFFC-6A99-465F-9FB8-1733AD9005B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDAFDFFC-6A99-465F-9FB8-1733AD9005B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDAFDFFC-6A99-465F-9FB8-1733AD9005B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

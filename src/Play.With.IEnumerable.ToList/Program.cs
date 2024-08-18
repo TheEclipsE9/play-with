@@ -9,7 +9,7 @@
             //IEnumerable<CustomId> ids = GetIds();// seperate objects
 
             // ids is an existing list in memory,
-            // so ToList()/ToArray() just make shallow copy 
+            // so ToList()/ToArray() just make shallow copy - cope refs
             // if change objects in list, it will change objects in array
             // both store references to the same object
             IEnumerable<CustomId> ids = GetIds().ToList();//
